@@ -1,6 +1,10 @@
 # Typescript Library Template
 Use the button on the top right (Use this template) to make your own package with this template.
 
+| :warning: WARNING          |
+|:----------------------------------------------------------------------|
+| This template automatically runs test and publishes npm packages.     |
+
 ## Customize the package.json
 Change the values in the package.json. Especially those with values enclose in <>, namely:
 
@@ -36,6 +40,9 @@ developer experience you may want to look into IDE support for prettier and jest
 Feel free to change any settings (i.e. test settings) to fit your needs and taste.
 
 ## Publish you library
+Add a secret to your github repository called `NPM_PUBLISH_TOKEN`. It should contain your npmjs.com Access Token.
+It should be of type `Automation`. When you create a tag with a version pattern it will trigger an automatic publish.
+
 The current version is set to 0.0.0 on purpose, in order to get an appropriate version number with the `npm version` 
 command right away. You can publish a major, minor and patch version as follows:
 
@@ -45,6 +52,10 @@ command right away. You can publish a major, minor and patch version as follows:
 
 `npm version patch` -> 0.0.1 on first run
 
+The `npm version` command is configured to also push to Github and tag the push commit with the new version as a tag.
+This will trigger the Github action and thus test, lint and publish your package.
+
+On every push there will also be test triggered automatically.
 
 ## Change the README
 This README will not fit your project. Describe your project here instead.

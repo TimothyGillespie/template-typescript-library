@@ -1,8 +1,8 @@
 {
-	"name": "yourpackagename",
-	"version": "1.0.0",
-	"description": "",
-	"main": "index.js",
+	"name": "<package-name>",
+	"version": "0.0.0",
+	"description": "<Package description>",
+	"main": "index.ts",
 	"scripts": {
 		"test": "jest",
 		"build": "tsc",
@@ -14,9 +14,9 @@
 		"version": "npm run format && git add -A src",
 		"postversion": "git push && git push --tags"
 	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": ['<your keywords>'],
+	"author": "<Your Name>",
+	"license": "<Your chosen license - also add LICENSE and possible license headers>",
 	"devDependencies": {
 		"@types/jest": "^26.0.23",
 		"jest": "^27.0.4",
